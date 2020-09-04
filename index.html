@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="JavaScriptSimpleProjects.css">
+    <title>Mini Projects</title>
+</head>
+<body>
+    <div class="time container4">
+        <h1>Digital Clock</h1>
+        <label  id="curTim">00:00:00</label>
+        <br>
+        <button onclick="curTim()" class="catbtn" id="btn8">Start Digital Clock</button>
+    </div>
+    <div class="container">
+        <div>
+        <h1>Find days</h1>
+        </div>
+        <div class="age">
+            <div>
+            <button id="btn1" value="Default" onclick="clickme()">Click Me!</button>
+            </div>
+            <div>
+            <button id="btn2" onclick="reset()" >Reset</button>
+            </div>
+        </div>
+        <div id="result">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div>
+            <h1>Get Cats!</h1>
+        </div>
+        <div class="age">
+            <button class="catbtn" id="btn3" value="Default" onclick="showCat()">Get Cat</button>
+        </div>
+            <div class="resuls age" id="imgs"> </div>
+    </div>
+
+    <div class="container3">
+        <div>
+            <h1>Rock,Paper,Siecer Game</h1>
+        </div>
+        <div>
+            <h2 id='Fullscore'>Score:<span id="score">00</span></h2>
+        </div>
+        <div id='images'>
+            <img src="won rock.jpg" class='img' alt="Rock" id="rock"    onclick="humanSelect(this) ">
+            <img src="losed rock.jpg" class='img' alt="Paper" id="paper"  onclick="humanSelect(this)">
+            <img src="loss rock.jpg" class='img' alt="Siecer"id="siecer" onclick="humanSelect(this)">
+        </div>
+        <div class="age RPS">
+        <button onclick="ResetImgs(0)" class="catbtn" id="btn9">Next</button>
+        <button onclick="ResetImgs(1)" class="catbtn" id="btn10" disabled>Let's Play</button>
+        </div>
+    </div>
+    <div class="container3" id ='cal'>
+        <div>
+            <h1>Rock,Paper,Siecer Game</h1>
+        </div>
+            <form style="padding: 200px;" method="POST">
+                <fieldset style="width: 100px;">
+                    <legend >Calcultor</legend>
+            <table border="1%"style="border-radius:5px;border-color:blue;border-top-color:rgb(127, 157, 255);">
+                
+                <tr >
+                    <td colspan="4"><p class="dis dis" value="0" id="txt"></p></td>
+                </tr>
+                <tr>
+                    <td><button class="1 inner" onclick="insert(1)" type="button">1</button></td>
+                    <td><button class="2 inner" onclick="insert(2)"value="2" type="button">2</button></td>
+                    <td><button class="3 inner" onclick="insert(3)"  value="3" type="button">3</button></td>
+                    <td rowspan="2"><button class="+ inner2" id="+" onclick="opt('+')" value="+"  type="button">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="4 inner" onclick="insert(4)"   value="4" type="button">4</button></td>
+                    <td><button class="5 inner" onclick="insert(5)"   value="5" type="button">5</button></td>
+                    <td><button class="6 inner" onclick="insert(6)"   value="6" type="button">6</button></td>
+                </tr>
+                <tr>
+                    <td><button class="7 inner" onclick="insert(7)"   value="7" type="button">7</button></td>
+                    <td><button class="8 inner" onclick="insert(8)"   value="8" type="button">8</button></td>
+                    <td><button class="9 inner" onclick="insert(9)"   value="9" type="button">9</button></td>
+                    <td rowspan="2"><button class="- inner2" id="-" onclick="opt('-')" value="-"  type="button">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="c inner" onclick="clear()"   value="C" type="button">C</button></td>
+                    <td><button class="0 inner" onclick="insert(0)"   value="0" type="button">0</button></td>
+                    <td><button class="cn inner" onclick="clearAll()"   value="CN" type="button">CN</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="* inner2 inner3" id="*" onclick="opt('*')" value="*"  type="button">*</button></td>
+                    <td colspan="2"><button class="/ inner2 inner3" id="/" onclick="opt('/')" value="/"  type="button">/</button></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><button class="dis" id="eqls" onclick="eql()"  value="=" type="button">=</button></td>
+                </tr>
+            </fieldset>
+            </table>
+            </form>
+        </div>
+    <div>
+        <h1>Option button Design</h1>
+    </div>
+    <div class="slct">
+        <select name="" id="slt" class="slt">
+            <option value="">option 1</option>
+            <option value="">option 2</option>
+            <option value="">option 3</option>
+            <option value="">option 4</option>
+        </select>
+        <span class="arrow"></span>
+    </div>
+    <div class="container4">
+        <div>
+            <h1>Change Button Color</h1>
+        </div>
+        <select name="selectName" id="selectId" onchange="changeColor(this)">
+            <option value="Default">Default</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Random">Random</option>
+        </select>
+        <span class="spanbtn">
+        <button class='b' id="btn4" value="Default">First</button>
+        <button class='b' id="btn5" value="Default">Second</button>
+        <button class='b' id="btn6" value="Default">Third</button>
+        <button class='b' id="btn7" value="Default">Fourth</button>
+        </span>
+    </div>
+    <div class="container4">
+    <div>
+        <h1>Image Zooming</h1>
+    </div>
+    <div  id="img-zoom">
+            <img src='post1.jpg' alt="" id="img-zoom-focus">
+    </div>
+    </div>
+    <script src="JavaScriptSimpleProjects.js"></script>
+
+</body>
+</html>
